@@ -1,2 +1,5 @@
 # AngularProject
-angular websit and JSON Placeholder API
+single page website using Angular and JSON Placeholder API.
+This website contains the following entities:
+• Users
+• Albums • Photos
