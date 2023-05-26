@@ -1,0 +1,35 @@
+<form class="container w-50 mt-4" [formGroup]="myValidation" (ngSubmit)="edit(name.value,phone.value,addressCity.value,addressStreet.value,addressAppartment.value,email.value)">
+  <div class="form-group mt-3">
+    <label for="name">Name</label>
+    <input #name type="text" class="form-control" formControlName="name" [placeholder]="'eg: Fekh'" id="name">
+  </div>
+  <div class="form-group mt-3">
+    <label for="email">E-mail</label>
+    <input #email type="text" class="form-control" formControlName="email" [placeholder]="'eg: Fekh@example.com'" id="email">
+  </div>
+  <div class="form-group mt-3">
+    <label for="phone">Phone</label>
+    <input #phone type="text" class="form-control" formControlName="phone"  [placeholder]="'eg: 01114876361'" id="phone">
+  </div>
+  <div class="form-group mt-3">
+    <label >Address</label>
+    <div class="d-flex">
+      <input #addressCity type="text" class="mx-1 form-control" formControlName="addressC" [placeholder]="'City'" id="address">
+      <input #addressStreet type="text" class="mx-1 form-control" formControlName="addressS" [placeholder]="'Street'" id="address">
+      <input #addressAppartment type="text" class="mx-1 form-control" formControlName="addressA" [placeholder]="'appart.'" id="address">
+    </div>
+  </div>
+
+
+  <div class="form-group mt-3 d-flex">
+    <!-- <input type="button" routerLink="/students" [queryParams]="{name:name.value,address:address.value,phone:phone.value,email:email.value}" value="ADD" class="form-control btn btn-success" id="email"> -->
+    <input mat-dialog-close type="button" value="Cancel" class="form-control btn btn-danger mx-2" id="email">
+    <input type="submit"  [disabled]="myValidation.invalid" value="Edit" class="form-control btn btn-success" id="email">
+    <!-- (click)="edit(name.value,phone.value,addressCity.value,addressStreet.value,addressAppartment.value,email.value)" -->
+  </div>
+  <!-- <input routerLink="/students?name="+name+"&"+address=${address}&phone=${phone}&email=${email}"  type="text" class="form-control" id="email"> -->
+
+
+
+</form>
+

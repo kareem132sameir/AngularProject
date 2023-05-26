@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center row">
+  <div class="col-12 text-dark text-center alert alert-white border-bottom">
+    <h2>Albums</h2>
+  </div>
+  <div class="row w-50" *ngIf="albumData else falseblock">
+    <div class="col-lg-3 col-6" *ngFor="let item of albumData; let i = index;">
+      <div class="card text-white mb-3 text-center shadow h-50" style="max-width: 10rem;">
+        <h3 class="card-header bg-white text-dark">Album ID {{ item.id }}</h3>
+        <a class="text-decoration-none text-white" [routerLink]="'/studentdetails/' + item.id + '/photos'">
+          <div *ngIf="no_of_photos" class="card-body bg-dark">
+            <ng-container *ngIf="no_of_photos[i]">
+              <h5 class="card-title">{{ no_of_photos[i].length }} Photos</h5>
+            </ng-container>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #falseblock>
+  Loading...
+</ng-template>
