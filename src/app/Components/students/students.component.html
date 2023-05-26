@@ -52,7 +52,7 @@
             <button (click)="editStudent(s)" mat-raised-button style="background-color: rgb(119, 185, 255);" >Edit</button>
           </td>
           <td>
-            <button (click)="deleteStudent(s)" mat-raised-button style="background-color: rgb(255, 81, 81);"  >Delete</button>
+            <button (click)="confirmDeletion(s)" mat-raised-button style="background-color: rgb(255, 81, 81);"  >Delete</button>
           </td>
         </tr>
         <tr *ngFor="let s of newStudentsList">
@@ -77,7 +77,7 @@
             <button mat-raised-button style="background-color: rgb(119, 185, 255);" (click)="editStudent(s)">Edit</button>
           </td>
           <td>
-            <button mat-raised-button style="background-color: rgb(255, 81, 81);" (click)="deleteStudent(s)"  >Delete</button>
+            <button mat-raised-button style="background-color: rgb(255, 81, 81);" (click)="confirmDeletion(s)"  >Delete</button>
             <!-- (click)="deleteStudent(s)" -->
           </td>
         </tr>
