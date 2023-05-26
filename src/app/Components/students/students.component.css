@@ -1,0 +1,37 @@
+#header{
+  background: #5151e9;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  /* cursor:pointer; */
+}
+a:hover{
+  background-color:rgb(196, 196, 196);
+  color: black;
+  /* cursor:pointer; */
+}
+
+
+
+.my-modal-container {
+  z-index: 9999; /* Highest z-index value for the modal */
+  position: fixed;
+  top: 50%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  /* Add additional styling properties as desired */
+
+}
+
+.my-modal-backdrop {
+  z-index: 9998; /* Z-index value lower than the modal container, but still high */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as desired */
+  /* Add additional styling properties as desired */
+}

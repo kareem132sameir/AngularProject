@@ -1,0 +1,14 @@
+*{
+  background-color:rgb(211, 211, 211);
+  /* height: 60px; */
+}
+a:hover ,select:hover{
+  background-color:rgb(196, 196, 196);
+  cursor:pointer;
+}
+
+img{
+  /* width:3rm; */
+  height: 70px;
+  border-radius: 7px;
+}
