@@ -1,5 +1,9 @@
 
-<app-header></app-header>
+<app-header style="position: fixed; top: 0; width: 100%; z-index: 9999;"></app-header>
+
+<div style="margin-top: 88px; overflow-y: scroll;">
+  <!-- Content below the header -->
+</div>
 <router-outlet (anEvent)="sentData($event)"></router-outlet>
 
 <!-- <app-add-student (anEvent)="sentData($event)"></app-add-student>

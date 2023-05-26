@@ -35,3 +35,8 @@ a:hover{
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as desired */
   /* Add additional styling properties as desired */
 }
+
+.table-header {
+  background-color: #343a40;
+  color: #fff;
+}
