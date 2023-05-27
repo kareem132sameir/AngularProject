@@ -1,69 +1,50 @@
 {
   "users": [
-
     {
-      "name": "Emily Kim",
-      "age": "36",
-      "address": "1414 Cedar St, Anytown USA",
-      "phone": "(555) 555-6767",
-      "email": "emilykim@example.com",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "name": "Michael Nguyen",
-      "age": 33,
-      "address": "1616 Walnut St, Anytown USA",
-      "phone": "(555) 555-7878",
-      "email": "michaelnguyen@example.com"
-    },
-    {
-      "id": 8,
-      "name": "Karen Wang",
-      "age": 29,
-      "address": "1818 Birch St, Anytown USA",
-      "phone": "(555) 555-8989",
-      "email": "karenwang@example.com"
-    },
-    {
-      "name": "kikoooo",
-      "age": "28",
-      "address": "ABBAS EL AKKAD",
-      "phone": "01017456660",
-      "email": "mangaka13215@gmail.com",
-      "id": 9
-    },
-    {
-      "name": "3adel titos",
-      "age": "29",
-      "address": "ABBAS EL AKKAD",
-      "phone": "01017456660",
-      "email": "mangaka13215@gmail.com",
-      "id": 10
-    },
-    {
-      "name": "sdasd",
-      "age": "28",
-      "address": "ABBAS EL AKKAD",
-      "phone": "01017456660",
-      "email": "mangaka13215@gmail.com",
-      "id": 11
-    },
-    {
-      "name": "kamosha",
-      "age": "27",
-      "address": "ABBAS EL AKKAD",
+      "name": "KAREEM MOHAMED SAMEIR",
+      "username": "kareem9000",
       "email": "mangaka13215@gmail.com",
       "phone": "01017456660",
-      "id": 12
+      "password": "123456",
+      "id": 1
     },
     {
-      "name": "kamosha",
-      "age": "3333",
-      "address": "ABBAS EL AKKAD",
-      "phone": "01017456660",
-      "email": "mangaka13215@gmail.com",
-      "id": 13
+      "name": "wdwad",
+      "username": "",
+      "email": "dwdwdw@gmail.com",
+      "phone": "123213231",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "username": "",
+      "email": "mohamed@gmail.com",
+      "phone": "",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "name": "wdwad",
+      "username": "",
+      "email": "moahmed1@gmail.com",
+      "phone": "123213231",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "admins": [
+    {
+      "email": "kareem@gmail.com",
+      "password": "kareem"
+    },
+    {
+      "email": "nasser@gmail.com",
+      "password": "nasser"
+    },
+    {
+      "email": "fakharany@gmail.com",
+      "password": "fakharany"
     }
   ]
 }
