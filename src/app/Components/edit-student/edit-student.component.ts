@@ -36,4 +36,7 @@ export class EditStudentComponent {
     addressS: new FormControl(this.IncomingData.address.addressStreet, Validators.required),
     addressA: new FormControl(this.IncomingData.address.addressAppartment, Validators.required),
   })
+  get EmailValid(){
+    return this.myValidation.controls["email"].valid;
+  }
 }

@@ -1,14 +1,54 @@
-<!-- alert alert-primary w-100 m-auto  -->
-<div class="d-flex justify-content-between ">
-  <div class="mt-2">
-    <!-- <a class="btn"><i routerLink="/" class="bi bi-people">Home</i></a> -->
-    <!-- <button class="btn"><i routerLink="/" class="bi bi-people">Home</i></button>-->
-    <a class="mx-4" routerLink="/" >
+<nav class="navbar navbar-expand-sm bg-light p-0">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
       <img src="/assets/photos/logo.png">
     </a>
 
-    <!-- <span class="mat-mdc-button-touch-target"></span> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Packags</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <select class="form-select">
+            <option>Currency ($)</option>
+            <option>Currency (€)</option>
+          </select>
+        </li>
+        <li class="nav-item">
+          <select class="form-select">
+            <option>English (EN)</option>
+            <option>Arabic (AR)</option>
+          </select>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+ <!-- <div class="d-flex justify-content-between ">
+  <div class="mt-2">
+    <a class="mx-4" routerLink="/" >
+      <img src="/assets/photos/logo.png">
+    </a>
   </div>
   <div class="justify-content-end mt-3">
     <a class="btn">Packags</a>
@@ -25,5 +65,4 @@
     <a class="btn" routerLink="/login">Sign In</a>
     <a class="btn" routerLink="/register">Sign Up</a>
   </div>
-  <!-- <a routerLink="/addstudent" class="btn">ADD</a> -->
-</div>
+</div> -->

@@ -5,7 +5,8 @@
   </div>
   <div class="form-group mt-3">
     <label for="email">E-mail</label>
-    <input #email type="text" class="form-control" formControlName="email" [placeholder]="'eg: Fekh@example.com'" id="email">
+    <input #email type="text" class="form-control" [ngStyle]="{'border-color': EmailValid ? 'green':'red'}" formControlName="email" [placeholder]="'eg: Fekh@example.com'" id="email">
+
   </div>
   <div class="form-group mt-3">
     <label for="phone">Phone</label>
