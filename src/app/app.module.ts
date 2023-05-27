@@ -14,8 +14,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { EditStudentComponent } from './Components/edit-student/edit-student.component';
 import { AlbumsComponent } from './Components/albums/albums.component';
 import { PhotosComponent } from './Components/photos/photos.component';
+// import { LoginComponent } from './Components/login/login.component';
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { LogInComponent } from './Components/log-in/log-in.component';
+import { StudentsUserComponent } from './Components/students-user/students-user.component';
+// import {SignupUpPageComponent} from './Components/sign-up/sign-up.component'
+import { AuthGuard } from './auth.guard';
+import { FooterComponent } from './Components/footer/footer.component';
+
 // import { FormControl,FormGroup,Validators } from '@angular/forms'
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 // import { UpdateStudentComponent } from './Components/update-student/update-student.component';
 // import { AlbumsComponent } from './Components/albums/albums.component';
 // import { PhotosComponent } from './Components/photos/photos.component';
@@ -35,7 +43,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AddStudentComponent,
     EditStudentComponent,
     AlbumsComponent,
-    PhotosComponent
+    PhotosComponent,
+    SignUpComponent,
+    LogInComponent,
+    StudentsUserComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +57,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MatDialogModule,
     MatButtonModule,
     ReactiveFormsModule,
-    NgbModule
-
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

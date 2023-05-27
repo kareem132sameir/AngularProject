@@ -6,11 +6,14 @@ import { EditStudentComponent } from '../edit-student/edit-student.component';
 import * as alertify from 'alertifyjs';
 
 @Component({
-  selector: 'app-students',
-  templateUrl: './students.component.html',
-  styleUrls: ['./students.component.css'],
+  selector: 'app-students-user',
+  templateUrl: './students-user.component.html',
+  styleUrls: ['./students-user.component.css']
 })
-export class StudentsComponent implements OnInit {
+
+
+
+export class StudentsUserComponent implements OnInit {
   students: any = [];
   newStudentsList: any = [];
   editedStudent: any;
@@ -19,30 +22,6 @@ export class StudentsComponent implements OnInit {
 
   constructor(public http: HttpClient, private dialog: MatDialog) {}
 
-  // OpenPopUp() {
-  //   if (!this.isDialogOpen) {
-  //     this.isDialogOpen = true;
-  //     const dialogConfig = new MatDialogConfig();
-  //     dialogConfig.disableClose = false;
-  //     dialogConfig.autoFocus = true;
-  //     dialogConfig.position = {
-  //       top: '-600px',
-  //       left: '340px',
-  //     };
-  //     dialogConfig.height = '500px';
-  //     dialogConfig.width = '700px';
-
-  //     const dialogRef = this.dialog.open(AddStudentComponent, dialogConfig);
-
-  //     dialogRef.afterClosed().subscribe((result) => {
-  //       if (result && result.name) {
-  //         // Handle the result
-  //         alertify.success('Added Successfully');
-  //       }
-  //       this.isDialogOpen = false;
-  //     });
-  //   }
-  // }
   OpenPopUp() {
     if (!this.isDialogOpen) {
       this.isDialogOpen = true;

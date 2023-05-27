@@ -8,106 +8,92 @@
   </div>
 </div>
 
+<div class="d-flex justify-content-center" >
+  <div *ngIf="students; else falseblock">
+    <table class="table table-striped mt-3 border">
+      <thead class="table-header">
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th></th>
+          <th></th>
 
-<!-- <button class="btn btn-outline-primary mb-2 me-2" (click)="openSm(content)">Small modal</button> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of students">
+          <td>
+            <input type="checkbox" />
+          </td>
+          <td>
+            {{ s.name }}
+          </td>
+          <td>
+            <!-- <a routerLink="/studentdetails/{{ s.id }}">{{ s.email }}</a> -->
+            <a routerLink="/studentdetails/{{s.id}}/albums">{{s.email}}</a>
 
-<!-- <div role="document" class="modal-dialog modal-sm"><div class="modal-content"><div _ngcontent-ng-c4232443412="" class="modal-header"><h4 _ngcontent-ng-c4232443412="" class="modal-title">Modal title</h4><button _ngcontent-ng-c4232443412="" type="button" aria-label="Close" class="btn-close"></button></div><div _ngcontent-ng-c4232443412="" class="modal-body"><p _ngcontent-ng-c4232443412="">One fine body…</p></div><div _ngcontent-ng-c4232443412="" class="modal-footer"><button _ngcontent-ng-c4232443412="" type="button" class="btn btn-light">Close</button></div></div></div> -->
-
-
-<ng-template #content let-modal class="">
-	<div class="modal-header">
-		<h4 class="modal-title">Modal title</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-	</div>
-	<div class="modal-body">
-		<p>One fine body&hellip;</p>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-	</div>
-</ng-template>
-<!--  -->
-
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <div *ngIf="students; else falseblock" class="table-responsive">
-        <table class="table table-striped mt-3 border">
-          <thead class="table-header">
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Address</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of students">
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>
-                {{ s.name }}
-              </td>
-              <td>
-                <a routerLink="/studentdetails/{{s.id}}/albums">{{s.email}}</a>
-              </td>
-              <td>
-                {{ s.phone }}
-              </td>
-              <td>
-                {{ s.address.street }}
-                {{ s.address.suite }}
-                {{ s.address.city }}
-                {{ s.address.zipcode }}
-                {{ s.address.addressCity }}
-                {{ s.address.addressStreet }}
-                {{ s.address.addressAppartment }}
-              </td>
-              <td>
-                <button (click)="editStudent(s)" mat-raised-button style="background-color: rgb(119, 185, 255);" >Edit</button>
-              </td>
-              <td>
-                <button (click)="confirmDeletion(s)" mat-raised-button style="background-color: rgb(255, 81, 81);"  >Delete</button>
-              </td>
-            </tr>
-            <tr *ngFor="let s of newStudentsList">
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>
-                {{ s.name }}
-              </td>
-              <td>
-                {{ s.email }}
-              </td>
-              <td>
-                {{ s.phone }}
-              </td>
-              <td>
-                {{ s.address.addressCity }}
-                {{ s.address.addressStreet }}
-                {{ s.address.addressAppartment }}
-              </td>
-              <td>
-                <button mat-raised-button style="background-color: rgb(119, 185, 255);" (click)="editStudent(s)">Edit</button>
-              </td>
-              <td>
-                <button mat-raised-button style="background-color: rgb(255, 81, 81);" (click)="confirmDeletion(s)"  >Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <ng-template #falseblock class="alert alert-danger mt-4 w-100">
-        Loading...
-      </ng-template>
-    </div>
+          </td>
+          <td>
+            {{ s.phone }}
+          </td>
+          <td>
+            {{ s.address.street }}
+            {{ s.address.suite }}
+            {{ s.address.city }}
+            {{ s.address.zipcode }}
+            {{ s.address.addressCity }}
+            {{ s.address.addressStreet }}
+            {{ s.address.addressAppartment }}
+          </td>
+          <td>
+            <button (click)="editStudent(s)" mat-raised-button style="background-color: rgb(119, 185, 255);" >Edit</button>
+          </td>
+          <td>
+            <button (click)="confirmDeletion(s)" mat-raised-button style="background-color: rgb(255, 81, 81);"  >Delete</button>
+          </td>
+        </tr>
+        <tr *ngFor="let s of newStudentsList">
+          <td>
+            <input  type="checkbox" />
+          </td>
+          <td>
+            {{ s.name }}
+          </td>
+          <td>
+            {{ s.email }}
+          </td>
+          <td>
+            {{ s.phone }}
+          </td>
+          <td>
+            {{ s.address.addressCity }}
+            {{ s.address.addressStreet }}
+            {{ s.address.addressAppartment }}
+          </td>
+          <td>
+            <button mat-raised-button style="background-color: rgb(119, 185, 255);" (click)="editStudent(s)">Edit</button>
+          </td>
+          <td>
+            <button mat-raised-button style="background-color: rgb(255, 81, 81);" (click)="confirmDeletion(s)"  >Delete</button>
+            <!-- (click)="deleteStudent(s)" -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <!-- <div class="alert alert-danger" id="warning" role="alert" *ngIf="warn">
+    <button mat-raised-button color="warn" >Delete</button>
+  </div> -->
+  <!-- <div class="alert alert-danger alert-dismissible fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div> -->
+  <ng-template #falseblock class="alert alert-danger mt-4 w-100">
+    Loading...
+  </ng-template>
 </div>
 
 <!-- <button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button> -->
