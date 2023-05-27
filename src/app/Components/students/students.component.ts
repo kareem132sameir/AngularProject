@@ -5,10 +5,12 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddStudentComponent } from '../add-student/add-student.component';
 import { EditStudentComponent } from '../edit-student/edit-student.component';
 import * as alertify from 'alertifyjs';
-
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {  ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
+  // encapsulation: ViewEncapsulation.None,
   styleUrls: ['./students.component.css'],
 })
 export class StudentsComponent implements OnInit {
@@ -19,9 +21,16 @@ export class StudentsComponent implements OnInit {
 
   // finalList:any;
   // newStudent:any;
-  constructor(public http: HttpClient,public myRoute: ActivatedRoute,private dialog: MatDialog) {
+
+
+  constructor(public http: HttpClient,public myRoute: ActivatedRoute,private dialog: MatDialog,private modalService: NgbModal) {
     // alertify.alert('Ready!');
   }
+  openSm(content:any) {
+		this.modalService.open(content, { size: 'sm' });
+	}
+
+  // openModal() {const modalRef = this.modalService.open(AddStudentComponent);}
   OpenPopUp() {
     //  event.stopPropagation();
     const dialogConfig = new MatDialogConfig();

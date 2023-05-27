@@ -40,3 +40,42 @@ a:hover{
   background-color: #343a40;
   color: #fff;
 }
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+@media (max-width: 768px) {
+  /* Adjust table layout for smaller screens */
+  .responsive-table {
+    width: 100%;
+  }
+
+  .responsive-table thead {
+    display: none; /* Hide table header on small screens */
+  }
+
+  .responsive-table td,
+  .responsive-table th {
+    display: block;
+    text-align: left;
+  }
+
+  .responsive-table td:before {
+    /* Add data labels for each table cell */
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
+
+
+.dark-modal .modal-content {
+  background-color: #292b2c;
+  color: white;
+}
+.dark-modal .close {
+  color: white;
+}
+.light-blue-backdrop {
+  background-color: #5cb3fd;
+}

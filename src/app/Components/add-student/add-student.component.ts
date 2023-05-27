@@ -38,16 +38,16 @@ export class AddStudentComponent
     addressC: new FormControl("", Validators.required),
     addressS: new FormControl("", Validators.required),
     addressA: new FormControl("", Validators.required),
-
   })
-
+  get EmailValid(){
+    return this.myValidation.controls["email"].valid;
+  }
 
   // <form [formGroup]=”myValidation”>
     // <input type=“text” formControlName=“name” value=“name” >
     // <input type=“text” formControlName=“age” value=“age” >
     // <input type=“submit” value=“submit” >
   // </form>
-
 
 
   // this.myValidation.Valid===>> returns (True/False) wether the user entered valid data

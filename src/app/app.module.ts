@@ -15,7 +15,7 @@ import { EditStudentComponent } from './Components/edit-student/edit-student.com
 import { AlbumsComponent } from './Components/albums/albums.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 // import { FormControl,FormGroup,Validators } from '@angular/forms'
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // import { UpdateStudentComponent } from './Components/update-student/update-student.component';
 // import { AlbumsComponent } from './Components/albums/albums.component';
 // import { PhotosComponent } from './Components/photos/photos.component';
@@ -45,7 +45,7 @@ import { PhotosComponent } from './Components/photos/photos.component';
     MatDialogModule,
     MatButtonModule,
     ReactiveFormsModule,
-
+    NgbModule
 
   ],
   providers: [],
