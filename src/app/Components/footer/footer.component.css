@@ -87,3 +87,23 @@
   font-size:13px;
   margin-bottom:0;
 }
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+#facebook-icon:hover i {
+  color: blue !important;
+}
+
+#twitter-icon:hover i {
+  color: aqua !important;
+}
+
+#instagram-icon:hover i {
+  color: red !important;
+}

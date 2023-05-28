@@ -34,9 +34,9 @@ export class StudentsUserComponent implements OnInit {
       };
       dialogConfig.height = '500px';
       dialogConfig.width = '700px';
-  
+
       const dialogRef = this.dialog.open(AddStudentComponent, dialogConfig);
-  
+
       dialogRef.afterClosed().subscribe((result) => {
         if (result && result.name) {
           // Handle the result
@@ -83,6 +83,7 @@ export class StudentsUserComponent implements OnInit {
     this.newStudentsList = this.newStudentsList.filter((student: any) => student.name != s.name);
     alertify.success('Deleted Successfully');
   }
+
 
   confirmDeletion(s: any) {
     let text = 'Do you really want to delete this User';

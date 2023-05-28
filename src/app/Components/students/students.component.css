@@ -80,3 +80,24 @@ a:hover{
 .light-blue-backdrop {
   background-color: #5cb3fd;
 }
+
+
+
+.alertify .ajs-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.alertify .ajs-body {
+  color: #000;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-yes {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-no {
+  background-color: #dc3545;
+  color: #fff;
+}

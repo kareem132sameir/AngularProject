@@ -3,6 +3,7 @@ import { RegistrationService } from 'src/app/Services/registration.service';
 import { Navigation, Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { AuthService } from '../../Services/AuthService';
+import * as alertify from 'alertifyjs';
 
 
 @Component({
@@ -26,12 +27,18 @@ export class LogInComponent {
         if(this.user.length>0)
         {
           if (this.user[0]["password"] === entered_password) {
-          
+
             console.log("Logged in!!");
             this.authService.login(); // Set the logged-in state to true
 
-            alert("hello admin");
-            this.myrouter.navigate(['/students/admin']);
+alertify.set('notifier', 'position', 'top-right');
+var msg = alertify.success('Current position: ' + alertify.get('notifier', 'position'));
+
+msg.delay(5).setContent('Hello Admin, welcome to our site!');
+this.myrouter.navigate(['/students/admin']);
+
+            // alert("hello admin");
+            // this.myrouter.navigate(['/students/admin']);
           }
         }
         else
@@ -42,7 +49,11 @@ export class LogInComponent {
               // alert(this.user[0]["password"]);
               if(this.user.length<1)
               {
-                alert("Wrong password or E-mail!");
+                // alert("Wrong password or E-mail!");
+                alertify.set('notifier', 'position', 'top-right');
+                var msg = alertify.error('Current position: ' + alertify.get('notifier', 'position'));
+
+                msg.delay(5).setContent('Wrong Credentials,please input the right data !');
               }
               if (this.user[0]["password"] === entered_password) {
                 this.authService.login(); // Set the logged-in state to true
@@ -65,7 +76,12 @@ export class LogInComponent {
 
   }
 
+  showPassword: boolean = false;
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
 }
 
-  
-  
+

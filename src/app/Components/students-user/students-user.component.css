@@ -1,7 +1,7 @@
 #header{
     background: #5151e9;
   }
-  
+
   a{
     color: black;
     text-decoration: none;
@@ -12,9 +12,9 @@
     color: black;
     /* cursor:pointer; */
   }
-  
-  
-  
+
+
+
   .my-modal-container {
     z-index: 9999; /* Highest z-index value for the modal */
     position: fixed;
@@ -22,9 +22,9 @@
     left: 50%; /* Adjust the left position as needed */
     transform: translate(-50%, -50%);
     /* Add additional styling properties as desired */
-  
+
   }
-  
+
   .my-modal-backdrop {
     z-index: 9998; /* Z-index value lower than the modal container, but still high */
     position: fixed;
@@ -35,9 +35,8 @@
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as desired */
     /* Add additional styling properties as desired */
   }
-  
+
   .table-header {
     background-color: #343a40;
     color: #fff;
   }
-  
