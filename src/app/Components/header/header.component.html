@@ -1,17 +1,19 @@
 <nav class="navbar navbar-expand-sm bg-light p-0">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">
-      <img src="/assets/photos/logo.png">
-    </a>
+    <div class="d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" routerLink="/">
+        <img src="/assets/photos/logo.png">
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Packags</a>
+          <a class="nav-link" href="#">Packages</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Offers</a>
@@ -32,37 +34,12 @@
           </select>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sign In</a>
+          <a class="nav-link" href="#" routerLink="/login">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sign Up</a>
+          <a class="nav-link" href="#" routerLink="/register">Sign Up</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
- <!-- <div class="d-flex justify-content-between ">
-  <div class="mt-2">
-    <a class="mx-4" routerLink="/" >
-      <img src="/assets/photos/logo.png">
-    </a>
-  </div>
-  <div class="justify-content-end mt-3">
-    <a class="btn">Packags</a>
-    <a class="btn">Offers</a>
-    <a class="btn">Contact Us</a>
-    <select class="alert alert-primary border-0 text-dark">
-      <option >Currency ($)</option>
-      <option >Currency (€)</option>
-    </select>
-    <select class="alert alert-primary border-0 text-dark">
-      <option >English (EN)</option>
-      <option >Arabic (AR)</option>
-    </select>
-    <a class="btn" routerLink="/login">Sign In</a>
-    <a class="btn" routerLink="/register">Sign Up</a>
-  </div>
-</div> -->

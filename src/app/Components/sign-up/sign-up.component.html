@@ -1,136 +1,47 @@
-<!-- <form class="container w-50 mt-4">
 
-    <div class="form-group mt-3">
-      <label for="name">Name</label>
-      <input #name type="text" class="form-control" id="name">
-    </div>
-    <div class="form-group mt-3">
-      <label for="age">Age</label>
-      <input #age type="text" class="form-control" id="age">
-    </div>
-    <div class="form-group mt-3">
-      <label for="address">Address</label>
-      <input #address type="text" class="form-control" id="address">
-    </div>
-    <div class="form-group mt-3">
-      <label for="phone">Phone</label>
-      <input #phone type="text" class="form-control" id="phone">
-    </div>
-    <div class="form-group mt-3">
-      <label for="email">E-mail</label>
-      <input #email type="text" class="form-control" id="email">
-    </div>
-    <div class="form-group mt-3">
-      <label for="password">Password</label>
-      <input #password type="password" class="form-control" id="password">
-    </div>
-    <div class="form-group mt-3">
-      <input type="button" (click)="add(name.value,age.value,address.value,phone.value,email.value,password.value);" value="ADD" class="form-control btn btn-success" id="email">
-    </div>
-  </form> -->
-
-  <!-- <div>
-    <h1>Hello Welcome </h1>
-     <h3>Create An Account</h3>
-       <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-         <div>
-           <label for="email">Email</label>
-           <input formControlName="email"  type="email"  required>
-           <label for="password">Password</label>
-           <input formControlName="password"  type="password">
-         </div>
-         <button>Submit</button>
-         <span>Already have an account? 
-         <a routerLink="/login">signUp</a></span>
-       </form>
-   </div> -->
-
-
-<!-- 
-
-
-   <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+   <section class="vh-100 gradient-custom" >
+    <div class="container py-3 h-75 "  >
+      <div class="row d-flex justify-content-center align-items-center h-90">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card bg-dark text-white" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
-  
+
               <div class="mb-md-5 mt-md-4 pb-5">
-  
-                <h2 class="fw-bold mb-2 text-uppercase">Create an Account</h2>
-                <p class="text-white-50 mb-5">Hello, welcome! Please sign up to create an account.</p>
-  
-                <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-                  <div class="form-outline form-white mb-4">
-                    <input formControlName="email" type="email" id="typeEmailX" class="form-control form-control-lg" />
-                    <label class="form-label" for="typeEmailX">Email</label>
-                  </div>
-  
-                  <div class="form-outline form-white mb-4">
-                    <input formControlName="password" type="password" id="typePasswordX" class="form-control form-control-lg" />
-                    <label class="form-label" for="typePasswordX">Password</label>
-                  </div>
-  
-                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Submit</button>
-                </form>
-  
-                <div>
-                  <p class="mb-0">Already have an account? <a routerLink="/login" class="text-white-50 fw-bold">Login</a></p>
-                </div>
-  
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-   -->
-   <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card bg-dark text-white" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
-  
-              <div class="mb-md-5 mt-md-4 pb-5">
-  
+
                 <h2 class="fw-bold mb-2 text-uppercase">Create an Account</h2>
                 <p class="text-white-50 mb-5">Please fill in the following details:</p>
-  
+
                 <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-  
+
                   <div class="form-outline form-white mb-4">
                     <input type="text" id="nameInput" class="form-control form-control-lg" formControlName="name" />
                     <label class="form-label" for="nameInput">Name</label>
                   </div>
-  
+
                   <div class="form-outline form-white mb-4">
                     <input type="text" id="usernameInput" class="form-control form-control-lg" formControlName="username" />
                     <label class="form-label" for="usernameInput">Username</label>
                   </div>
-  
+
                   <div class="form-outline form-white mb-4">
                     <input type="email" id="emailInput" class="form-control form-control-lg" formControlName="email" />
                     <label class="form-label" for="emailInput">Email</label>
                   </div>
-  
+
                   <div class="form-outline form-white mb-4">
                     <input type="text" id="phoneInput" class="form-control form-control-lg" formControlName="phone" />
                     <label class="form-label" for="phoneInput">Phone</label>
                   </div>
-  
+
                   <div class="form-outline form-white mb-4">
                     <input type="password" id="passwordInput" class="form-control form-control-lg" formControlName="password" />
                     <label class="form-label" for="passwordInput">Password</label>
                   </div>
-  
+
                   <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
-  
+
                 </form>
-  
+
               </div>
                 <div>
                 <p class="mb-0">Already have an account? <a routerLink="/login" class="text-white-50 fw-bold">Login</a>
@@ -142,4 +53,3 @@
       </div>
     </div>
   </section>
-  

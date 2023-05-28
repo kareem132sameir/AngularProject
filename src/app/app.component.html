@@ -1,11 +1,10 @@
 
-<app-header style="position: fixed; top: 0; width: 100%; z-index: 9999;"></app-header>
+<app-header class="sticky-top"></app-header>
 
-<div style="margin-top: 83px; overflow-y: scroll;">
-  <!-- Content below the header -->
-</div>
+<div >
+
 <router-outlet (anEvent)="sentData($event)"></router-outlet>
-<!-- <app-sign-up> </app-sign-up>
-<app-log-in></app-log-in> -->
-<!-- <app-add-student (anEvent)="sentData($event)"></app-add-student>
-<app-students [newStudents]="students"></app-students> -->
+
+</div>
+
+<app-footer></app-footer>
