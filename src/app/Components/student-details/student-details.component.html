@@ -8,7 +8,8 @@
   </div>
   <ng-template #loading class="alert alert-danger">Loading....</ng-template>
 </div> -->
-<div class="container mt-4 d-flex flex-column justify-content-center align-items-center">
+<body>
+<div class="container  d-flex flex-column justify-content-center align-items-center">
   <div *ngIf="studentData else loading" class="row bg-light alert alert-secondary shadow">
     <div class="px-3 col-4 card-body text-left border-end border-dark">
       <div class="card-text">
@@ -42,3 +43,4 @@
     <p class="card-text">Loading....</p>
   </div>
 </ng-template>
+</body>
