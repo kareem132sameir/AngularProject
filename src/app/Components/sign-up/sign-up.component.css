@@ -1,20 +1,36 @@
-.gradient-custom {
-    /* fallback for old browsers */
+/* .gradient-custom {
     background: #6a11cb;
 
-    /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
     }
     section {
-      /* fallback for old browsers */
       background: #6a11cb;
 
-      /* Chrome 10-25, Safari 5.1-6 */
       background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+      } */
+      html, body {
+        width: 100%;
+        height:100%;
+      }
+
+      body {
+          background: linear-gradient(-45deg, #dc785a, #d91862, #23a6d5, #924fef);
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+          0% {
+              background-position: 0% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 0% 50%;
+          }
       }

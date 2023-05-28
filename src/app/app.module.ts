@@ -21,6 +21,7 @@ import { StudentsUserComponent } from './Components/students-user/students-user.
 // import {SignupUpPageComponent} from './Components/sign-up/sign-up.component'
 import { AuthGuard } from './auth.guard';
 import { FooterComponent } from './Components/footer/footer.component';
+import { afterLoginGuardGuard } from './after-login-guard.guard';
 
 // import { FormControl,FormGroup,Validators } from '@angular/forms'
 
@@ -58,7 +59,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     MatButtonModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,afterLoginGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
