@@ -1,5 +1,5 @@
 #header{
-  background: #5151e9;
+  background: linear-gradient(to right, rgb(6, 92, 168), rgba(37, 117, 252, 1))
 }
 
 a{
@@ -43,6 +43,7 @@ a:hover{
 
 .table-container {
   overflow-x: auto; /* Enable horizontal scrolling */
+
 }
 
 @media (max-width: 768px) {

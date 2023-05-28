@@ -50,14 +50,15 @@ export class StudentsComponent implements OnInit {
       dialogConfig.disableClose = false;
       dialogConfig.autoFocus = true;
       dialogConfig.position = {
-        top: '-600px',
+        top: '-900px',
         left: '340px',
       };
       dialogConfig.height = '500px';
       dialogConfig.width = '700px';
-  
+
+
       const dialogRef = this.dialog.open(AddStudentComponent, dialogConfig);
-  
+
       dialogRef.afterClosed().subscribe((result) => {
         if (result && result.name) {
           // Handle the result
@@ -76,7 +77,7 @@ export class StudentsComponent implements OnInit {
       const dialogRef = this.dialog.open(EditStudentComponent, {
         data: student,
         position: {
-          top: '-500px',
+          top: '-900px',
           left: '340px',
         },
         width: '700px',
