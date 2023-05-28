@@ -46,8 +46,12 @@ this.myrouter.navigate(['/students/admin']);
           this.myService.getUserByEmail(email).subscribe({
             next: (data) => {
               this.user = data;
-              // alert(this.user[0]["password"]);
-              if(this.user.length<1)
+              alertify.set('notifier', 'position', 'top-right');
+              var msg = alertify.success('Current position: ' + alertify.get('notifier', 'position'));
+
+              msg.delay(5).setContent('Hello There , Welcome to our site!');
+
+                  ;          if(this.user.length<1)
               {
                 // alert("Wrong password or E-mail!");
                 alertify.set('notifier', 'position', 'top-right');

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AlbumsComponent implements OnInit {
   id: any;
-  no_of_photos: any = []; // Initialize as an object to hold the photo counts for each album
+  no_of_photos: any = [];
   albumData: any;
   albumID: any;
 
@@ -56,6 +56,6 @@ export class AlbumsComponent implements OnInit {
     }
   }
 
-  // Rest of your component code...
+
 
 }

@@ -1,4 +1,6 @@
 
+import { CanActivateFn } from '@angular/router';
+
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AuthService } from './Services/AuthService';
@@ -7,24 +9,19 @@ import * as alertify from 'alertifyjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class afterLoginGuardGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
     if (this.authService.isLoggedIn()) {
-      console.log(this.authService.isLoggedIn);
-      console.log("hello world");
-      return true;
-    } else {
-      this.router.navigate(['/login']); // Redirect to the login page
-      console.log(this.authService.isLoggedIn);
-
-      console.log("hello world2");
       alertify.set('notifier', 'position', 'top-center');
-      alertify.error('You need to login first.');
-      // alert('You need to log in');
+      alertify.error('You are already logged in .');
+      // User is logged in, prevent access to login and register pages
+      // this.router.navigate(['/students']); // Redirect to the desired page after login
       return false; // Block access to the route
+    } else {
+      // User is not logged in, allow access to login and register pages
+      return true; // Allow access to the route
     }
   }
 }
-
