@@ -100,17 +100,33 @@ export class StudentsComponent implements OnInit {
     }
   }
 
+  // deleteStudent(s: any) {
+  //   this.students = this.students.filter((student: any) => student.name != s.name);
+  //   this.newStudentsList = this.newStudentsList.filter((student: any) => student.name != s.name);
+  //   alertify.success('Deleted Successfully');
+  // }
+
+  // confirmDeletion(s: any) {
+  //   let text = 'Do you really want to delete this User';
+  //   if (confirm(text) == true) {
+  //     this.deleteStudent(s);
+  //   }
+  // }
   deleteStudent(s: any) {
-    this.students = this.students.filter((student: any) => student.name != s.name);
-    this.newStudentsList = this.newStudentsList.filter((student: any) => student.name != s.name);
+    this.students = this.students.filter((student: any) => student.name !== s.name);
+    this.newStudentsList = this.newStudentsList.filter((student: any) => student.name !== s.name);
     alertify.success('Deleted Successfully');
   }
 
   confirmDeletion(s: any) {
-    let text = 'Do you really want to delete this User';
-    if (confirm(text) == true) {
-      this.deleteStudent(s);
-    }
+    alertify.confirm('Confirmation', 'Do you really want to delete this user?',
+      () => {
+        this.deleteStudent(s);
+      },
+      () => {
+        console.log('Deletion canceled');
+      }
+    );
   }
 
   ngOnInit(): void {

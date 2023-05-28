@@ -144,6 +144,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import { DataService } from '../../Services/data.service';
 import { RegistrationService } from 'src/app/Services/registration.service';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -184,7 +185,11 @@ export class SignUpComponent implements OnInit {
         // alert(oldUser)
         if(this.oldUser.length>0)
         {
-          alert('User already exists');
+          // alert('User already exists');
+          alertify.set('notifier', 'position', 'top-center');
+
+          alertify.error('User already exists,please pick another name!');
+
         }
         else
         {

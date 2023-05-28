@@ -1,10 +1,31 @@
 .gradient-custom {
     /* fallback for old browsers */
     background: #161E87;
-    
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-    
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+    .social-icon {
+      display: inline-block;
+      /* margin-right: 10px; */
+      transition: transform 0.4s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.7);
+    }
+
+    .social-icon:hover i {
+      color: blue !important; /* Change to the desired color for Facebook */
+    }
+
+    #twitter-icon:hover i {
+      color: aqua !important; /* Change to the desired color for Twitter */
+    }
+
+    #google-icon:hover i {
+      color: red !important; /* Change to the desired color for Google */
     }
