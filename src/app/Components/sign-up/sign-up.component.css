@@ -17,6 +17,11 @@
         height:100%;
       }
 
+      section {
+        height: 140vh !important;
+      }
+
+
       body {
           background: linear-gradient(-45deg, #dc785a, #d91862, #23a6d5, #924fef);
           background-size: 400% 400%;

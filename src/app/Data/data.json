@@ -87,6 +87,14 @@
       "phone": "",
       "password": "nasser",
       "id": 11
+    },
+    {
+      "name": "KAREEM MOHAMED SAMEIR",
+      "username": "kareem9000",
+      "email": "kimosh9000@gmail.com",
+      "phone": "01017456660",
+      "password": "123456",
+      "id": 12
     }
   ],
   "admins": [
