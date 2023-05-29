@@ -29,7 +29,7 @@ export class LogInComponent {
           if (this.user[0]["password"] === entered_password) {
 
             console.log("Logged in!!");
-            this.authService.login(); // Set the logged-in state to true
+            this.authService.loginWithToken(); // Set the logged-in state to true
 
 alertify.set('notifier', 'position', 'top-right');
 var msg = alertify.success('Current position: ' + alertify.get('notifier', 'position'));
@@ -60,7 +60,7 @@ this.myrouter.navigate(['/students/admin']);
                 msg.delay(5).setContent('Wrong Credentials,please input the right data !');
               }
               if (this.user[0]["password"] === entered_password) {
-                this.authService.login(); // Set the logged-in state to true
+                this.authService.loginWithToken(); // Set the logged-in state to true
 
                 console.log("Logged in!!");
                 this.myrouter.navigate(['/students']);

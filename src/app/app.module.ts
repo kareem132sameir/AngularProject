@@ -22,6 +22,7 @@ import { StudentsUserComponent } from './Components/students-user/students-user.
 import { AuthGuard } from './auth.guard';
 import { FooterComponent } from './Components/footer/footer.component';
 import { afterLoginGuardGuard } from './after-login-guard.guard';
+import { HeaderLoggedInComponent } from './Components/header-logged-in/header-logged-in.component';
 
 // import { FormControl,FormGroup,Validators } from '@angular/forms'
 
@@ -48,7 +49,8 @@ import { afterLoginGuardGuard } from './after-login-guard.guard';
     SignUpComponent,
     LogInComponent,
     StudentsUserComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderLoggedInComponent
   ],
   imports: [
     BrowserModule,

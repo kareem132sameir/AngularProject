@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AuthService } from './Services/AuthService';
@@ -12,19 +11,22 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     if (this.authService.isLoggedIn()) {
-      console.log(this.authService.isLoggedIn);
-      console.log("hello world");
+      // User is already logged in
       return true;
-    } else {
-      this.router.navigate(['/login']); // Redirect to the login page
-      console.log(this.authService.isLoggedIn);
-
-      console.log("hello world2");
+    }
+    else if (this.authService.hasToken())
+    {
+      // User has a valid token, log them in
+      this.authService.loginWithToken();
+      return true;
+    }
+    else
+    {
+      // User is not logged in, redirect to the login page
+      this.router.navigate(['/login']);
       alertify.set('notifier', 'position', 'top-center');
       alertify.error('You need to login first.');
-      // alert('You need to log in');
-      return false; // Block access to the route
+      return false;
     }
   }
 }
-

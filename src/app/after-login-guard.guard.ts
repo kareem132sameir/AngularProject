@@ -1,6 +1,5 @@
 
 import { CanActivateFn } from '@angular/router';
-
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AuthService } from './Services/AuthService';
@@ -9,7 +8,9 @@ import * as alertify from 'alertifyjs';
 @Injectable({
   providedIn: 'root'
 })
-export class afterLoginGuardGuard implements CanActivate {
+
+export class afterLoginGuardGuard implements CanActivate
+{
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
