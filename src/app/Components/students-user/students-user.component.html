@@ -1,14 +1,11 @@
 <body>
 <div id="header" class="w-100 p-3 d-flex justify-content-around">
     <div>
-      <h3>Users</h3>
+      <h3 style="color:white">Users</h3>
     </div>
     <div>
-      <!-- <button  (click)="OpenPopUp()" class="m-auto">+ Add User</button> -->
-      <!-- <button mat-raised-button style="background-color: rgb(215, 235, 255);" (click)="OpenPopUp()">Add User</button> -->
     </div>
   </div>
-
   <div class="d-flex justify-content-center" >
     <div *ngIf="students; else falseblock">
       <table class="table table-striped mt-3 border">
@@ -21,14 +18,10 @@
             <th>Address</th>
             <th></th>
             <th></th>
-
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let s of students">
-            <td>
-              <input type="checkbox" />
-            </td>
             <td>
               {{ s.name }}
             </td>

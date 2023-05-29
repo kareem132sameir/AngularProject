@@ -1,46 +1,35 @@
-<!-- <div class="container mt-4">
-  <div *ngIf="studentData else loading"  class="alert alert-secondary">
-    <h5>Name:{{studentData.name}}</h5>
-    <h5>Age:{{studentData.age}}</h5>
-    <h5>Email:{{studentData.email}}</h5>
-    <h5>Address:{{studentData.address}}</h5>
-    <h5>Phone:{{studentData.phone}}</h5>
-  </div>
-  <ng-template #loading class="alert alert-danger">Loading....</ng-template>
-</div> -->
 <body>
-<div class="container  d-flex flex-column justify-content-center align-items-center">
-  <div *ngIf="studentData else loading" class="row bg-light alert alert-secondary shadow">
-    <div class="px-3 col-4 card-body text-left border-end border-dark">
-      <div class="card-text">
-        <h5><b>Name:</b> {{studentData.name}}</h5>
-        <h5><b>Username:</b> {{studentData.username}}</h5>
+  <div class="pt-5 container  d-flex flex-column justify-content-center align-items-center">
+    <div *ngIf="studentData else loading" class="row bg-light alert alert-secondary shadow">
+      <div class="px-3 col-4 card-body text-left border-end border-dark">
+        <div class="card-text">
+          <h5><b>Name:</b> {{studentData.name}}</h5>
+          <h5><b>Username:</b> {{studentData.username}}</h5>
+        </div>
+      </div>
+      <div class="px-3 col-4 card-body text-left border-end border-dark">
+        <div class="card-text">
+          <h5>
+            <b>Address:</b> {{studentData.address.street}},
+            {{studentData.address.suite}},
+            {{studentData.address.city}},
+            {{studentData.address.zipcode}}
+          </h5>
+        </div>
+      </div>
+      <div class="px-3 col-4 card-body text-left">
+        <div class="card-text">
+          <h5><b>Phone:</b> {{studentData.phone}}</h5>
+          <h5><b>Email:</b> {{studentData.email}}</h5>
+        </div>
       </div>
     </div>
-    <div class="px-3 col-4 card-body text-left border-end border-dark">
-      <div class="card-text">
-        <h5>
-          <b>Address:</b> {{studentData.address.street}},
-          {{studentData.address.suite}},
-          {{studentData.address.city}},
-          {{studentData.address.zipcode}}
-        </h5>
-      </div>
-    </div>
-    <div class="px-3 col-4 card-body text-left">
-      <div class="card-text">
-        <h5><b>Phone:</b> {{studentData.phone}}</h5>
-        <h5><b>Email:</b> {{studentData.email}}</h5>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
-  <router-outlet></router-outlet>
-</div>
 
-
-<ng-template #loading class="card bg-danger">
-  <div class="card-body text-center">
-    <p class="card-text">Loading....</p>
-  </div>
-</ng-template>
+  <ng-template #loading class="card bg-danger">
+    <div class="card-body text-center">
+      <p class="card-text">Loading....</p>
+    </div>
+  </ng-template>
 </body>
